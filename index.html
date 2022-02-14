@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu peso en otro planeta</title>
+</head>
+<body>
+    <header>
+        <p>Debido a la gravedad no pesamos igual en todos lados.</p>
+    </header>
+    <article>
+        <p>
+            "Cuando cortejas a una bella muchacha, una hora parece un segundo. Pero te sientas sobre carbón al rojo vivo, un segundo parecerá una hora. Eso es relatividad". Albert Einstein.
+        </p>
+        <p>
+            "A veces me pregunto cómo llegué a desarrollar la teoría de la relatividad. La razón, creo, es que un adulto normal nunca se detiene a pensar en problemas de espacio y tiempo. Estas son cosas que se piensan durante la infancia, pero mi desarrollo intelectual se retrasó, y como resultado comencé a plantearme preguntas sobre el espacio y el tiempo cuando ya había crecido". Albert Einstein.
+        </p>
+    </article>
+    <script>
+        var weight = parseFloat(prompt("Averiguemos cuanto pesas en Marte.\n¿Cuánto pesas en kilogramos?"));
+        /* var mercuryGravity = 3.7;
+        var venusGravity = 8.9; */
+        var hearthGravity = 9.8;
+        var marsGravity = 3.721;
+        /* var jupiterGravity = 24.8;
+        var saturnGravity = 10.7;
+        var uranusGravity = 8.7;
+        var neptuneGravity = 11.0;
+        var plutoGravity = 0.6; */
+        var weightOnPlanet = (weight * marsGravity / hearthGravity).toFixed(2);
+        document.writeln("Tu peso en Marte" + " es de <strong>" + weightOnPlanet + " kg</strong>.");
+    </script>
+</body>
+</html>
