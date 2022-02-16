@@ -18,7 +18,9 @@
         </p>
     </article>
     <script>
-        var weight = parseFloat(prompt("Averiguemos cuanto pesas en Marte.\n¿Cuánto pesas en kilogramos?"));
+        var weight = parseFloat(prompt("¿Cuánto pesas en kilogramos?"));
+        var planet = parseFloat(prompt("Si quieres saber tu peso en otro planeta, ingresa el número de la opción que desees: 1. Mercurio, 2. Venus, 3. Marte, 4. Júpiter, 5. Saturno, 6. Urano, 7. Neptuno, 8. Plutón"));
+
         /* var mercuryGravity = 3.7;
         var venusGravity = 8.9; */
         var hearthGravity = 9.8;
@@ -28,8 +30,45 @@
         var uranusGravity = 8.7;
         var neptuneGravity = 11.0;
         var plutoGravity = 0.6; */
-        var weightOnPlanet = (weight * marsGravity / hearthGravity).toFixed(2);
-        document.writeln("Tu peso en Marte" + " es de <strong>" + weightOnPlanet + " kg</strong>.");
+
+        if(planet == 1) {
+            var planetGravity = 3.7;
+            planet = "Mercurio";
+            var totalWeight = weight * planetGravity / hearthGravity;
+        } else if(planet == 2) {
+            var planetGravity = 8.9;
+            planet = "Venus";
+            var totalWeight = weight * planetGravity / hearthGravity;
+        } else if(planet == 3) {
+            var planetGravity = 3.721;
+            planet = "Marte";
+            var totalWeight = weight * planetGravity / hearthGravity;
+        } else if(planet == 4) {
+            var planetGravity = 24.8;
+            planet = "Júpiter";
+            var totalWeight = weight * planetGravity / hearthGravity;
+        } else if(planet == 5) {
+            var planetGravity = 10.7;
+            planet = "Saturno";
+            var totalWeight = weight * planetGravity / hearthGravity;
+        } else if(planet == 6) {
+            var planetGravity = 8.7;
+            planet = "Urano";
+            var totalWeight = weight * planetGravity / hearthGravity;
+        } else if(planet == 7) {
+            var planetGravity = 11.0;
+            planet = "Neptuno";
+            var totalWeight = weight * planetGravity / hearthGravity;
+        } else if(planet == 8) {
+            var planetGravity = 0.6;
+            planet = "Plutón";
+            var totalWeight = weight * planetGravity / hearthGravity;
+        } else {
+            planet = "Tierra";
+            var totalWight = weight;
+        }
+
+        document.writeln("Tu peso en " + planet + " es de <strong>" + totalWeight.toFixed(2) + " kg</strong>.");
     </script>
 </body>
 </html>
