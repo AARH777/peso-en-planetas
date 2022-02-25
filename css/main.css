@@ -1,0 +1,24 @@
+:root {
+    --darkness: #000;
+    --text: #EEE;
+}
+
+body {
+    background-color: var(--darkness);
+    color: var(--text);
+}
+
+
+blockquote > p {
+    /* Especifica open-quote y close-quote a las marcas de cita francesas */
+    quotes: "«" "»" "‹" "›";
+    /* Especifica dos niveles de marcas de cita */
+}
+
+blockquote>p:before {
+    content: open-quote;
+}
+
+blockquote>P:after {
+    content: close-quote;
+}
